@@ -48,7 +48,7 @@ class ReceivesController extends Controller
      */
     public function create()
     {
-        //
+        //To show the required create page when its clicked
         return view('receive.create');
     }
 

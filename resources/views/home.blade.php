@@ -18,13 +18,23 @@
                    {{-- <p> LoggedIn as {{ Auth::user()->name }}</p> --}}
 
                    @can('enter_stocks')
-                   <a href="/receive/create"> Enter Stock</a><br>
-                   <a href="/receive"> Check the Stocks</a><br>
-                   <a href="/ordernotify"> Check Orders</a>
-                
-
+                   <ul>
+                   <li><a href="/receive/create"> Enter Stock</a><br></li>
+                   <li><a href="/receive"> Check the Stocks</a><br></li>
+                   <li><a href="/ordernotify"> Check Orders</a></li>
+                   <li><a href="/posts/create"> Create Purchase Request</a></li>
+                   
+                   </ul>
                    @endcan
                    
+                   @can('print_prequest')
+                   <ul>
+                   <li><a href="/posts">Check Requests</a></li>
+                   <li><a href="/orders">Create Order</a></li>
+                   </ul>
+                   @endcan
+
+
                    
                     @if(count($receives)>0)
                    <table class="table table-stripped">

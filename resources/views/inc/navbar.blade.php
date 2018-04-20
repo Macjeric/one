@@ -21,10 +21,7 @@
     
                 <ul class="nav navbar-nav">
                   <li><a href="/home">Home</a></li>
-                  @can('print_prequest')
-                  <li><a href="/posts">Check Requests</a></li>
-                  <li><a href="/orders">Create Order</a></li>
-                  @endcan
+                 
                   {{--  <li><a href="/posts">Blog</a></li>  --}}
                 </ul>
      

@@ -24,6 +24,8 @@ Route::resource('free', 'FreesController');
 Route::resource('orders', 'OrdersController');
 Route::resource('ordernotify', 'OrdernotifyController');
 Route::get('/ordersmade', 'OrdersMadeController@index')->name('ordersmade');
+Route::resource('Admin', 'AdminsController');
+
 
 // Route::get('/printview', 'PrintController@printview');
 
