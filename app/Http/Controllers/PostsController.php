@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 
+
 class PostsController extends Controller
 {
 
@@ -26,7 +27,7 @@ class PostsController extends Controller
     public function index()
     {
         //Calling the model and pass the data into an array
-        // $posts = DB:: select(' SELECT FROM * posts');
+        // $posts = DB::select('SELECT FROM * posts');(use Illuminate\Support\Facades\DB;)
         // $posts = Post::all();
         $posts = Post::orderBy('created_at','desc')->paginate(10);
         return view('posts.index')->with('posts', $posts);

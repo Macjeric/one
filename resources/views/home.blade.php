@@ -17,6 +17,10 @@
                    {{-- <p> You are logged in!</p> --}}
                    {{-- <p> LoggedIn as {{ Auth::user()->name }}</p> --}}
 
+                   @can('user_admin')
+
+                   <a href="/Admin" class="btn btn-default">Panel</a>@endcan
+
                    @can('enter_stocks')
                    <ul>
                    <li><a href="/receive/create"> Enter Stock</a><br></li>

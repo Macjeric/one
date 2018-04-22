@@ -29,8 +29,23 @@
         </tr>
         @endforeach
     </table>
-    {!! Form::submit('Print',['class'=>'btn', 'class' => 'pull-right'])!!}
-    {!! Form::close()!!}
+
+{{-- <a href="{{URL::to('print/printview')}}" class="btnPrint">Print</a>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.btnPrint').printPage();
+});
+</script> --}}
+
+{{-- @media print{ --}}
+    {{-- #printpage{
+        display:none;
+    } --}}
+
+<button id="printpage" onClick ="window.print()">Print</button>
+    
+    {{-- {!! Form::submit('Print',['class'=>'btn', 'class' => 'pull-right'])!!}
+    {!! Form::close()!!} --}}
     
     @endcan
 @endsection

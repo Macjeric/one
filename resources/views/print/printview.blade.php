@@ -1,4 +1,10 @@
-<!doctype html>
-Changes 
+@extends('layouts.app')
+
+@section('content')
   
-        {!!Form::open(['action' => ['PrintpageController@print'], 'method' => 'GET'])!!}
+HELLO
+
+@endsection
+
+        {{-- {!!Form::open(['action' => ['PrintpageController@print'], 'method' => 'GET'])!!} --}}
+{{-- <a href="{{URL::to('print.index') class="btnPrint"}}">Print</a> --}}
