@@ -8,5 +8,7 @@
         <p><a class="btn btn-primary btn-lg" href="/login" role="button">Login</a> </p>
     </div>
        @endif
+       {{-- {{ HTML::image('imgs/arrows-box-business.jpg') }} --}}
+       {{-- {{ asset('arrows-box-business.jpg') }} --}}
  @endsection
   

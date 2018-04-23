@@ -141,6 +141,6 @@ class AdminsController extends Controller
         //
         $admin = Admin::find($id);
         $admin->delete();
-        return redirect('/Admin')->with('success', 'Post Removed');
+        return redirect('/Admin')->with('success', 'User Removed');
     }
 }
