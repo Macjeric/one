@@ -12,6 +12,18 @@
 
 
         <title> Chukua </title>
+
+        <style> 
+        
+        .bgimg{
+            background-image:url("imgs/arrows-box-business.jpg");
+            height: 100vh;
+
+            background-size:cover;
+            background-position:center;
+        }
+        </style>
+
     </head>
     <body>
         <div id="app">
