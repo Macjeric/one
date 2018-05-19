@@ -34,7 +34,12 @@
                    @can('print_prequest')
                    <ul>
                    <li><a href="/posts">Check Requests</a></li>
-                   <li><a href="/orders">Create Order</a></li>
+                   <li><a href="/orders/">Orders Created</a></li>
+                   <li><a href="/orders/create">Create new Order</a></li>
+                   <li><a href="/Supplier">Suppliers list</a></li>
+                   
+                   
+                   
                    </ul>
                    @endcan
 
@@ -44,7 +49,7 @@
                    <table class="table table-stripped">
                     <tr>
                         <th>Available Stocks </th>
-                        <th></th>
+                        <th><a href="/ordernotify/create">Not Available in Store</a></th>
                         <th></th>
                     </tr>
 
