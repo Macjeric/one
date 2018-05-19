@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Printpage;
 use Illuminate\Support\Facades\Input;
 use App\Post;
+use App\Order;
+
 
 class PrintpageController extends Controller
 {
@@ -106,5 +108,19 @@ class PrintpageController extends Controller
     $posts = Post::orderBy('created_at','desc')->paginate(10);
     return view('print.index')->with('posts', $posts);
     }
+
+    public function Printorder()
+    {
+        //Find the data to be displayed
+        $data = Input::get('checkbox');
+        $count = count($data);
+        if($count > 0){
+            $order = Order:: find($data);
+            return view('print.order')->with('data', $order);
+        }else{
+            return redirect('order')->with('error','Nothing selected');
+        }
+    }
+
 
 }

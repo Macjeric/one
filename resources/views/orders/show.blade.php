@@ -10,9 +10,13 @@
     <p> Department:  {!!$order-> department!!} </p>
     <p> Quantity:  {!!$order-> quantity!!} </p>
     <p> UOM:  {!!$order-> uom!!} </p>
+    <p> Supplier Name:  {!!$order-> supplier_name!!} </p>
+    <p> Supplier Address:  {!!$order-> supplier_address!!} </p>
+    
     <p> Price:  {!!$order-> price!!} </p>
+    
     <p> Total:  {!!$order-> total!!} </p>
-
+    
 </div>
 <hr>
 <small>Written on {{$order->created_at->toDayDateTimeString()}} </small> 

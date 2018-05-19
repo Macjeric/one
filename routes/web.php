@@ -20,6 +20,8 @@ Route::resource('posts', 'PostsController');
 Route::resource('/receive', 'ReceivesController');
 Route::resource('print', 'PrintpageController');
 Route::get('print','PrintpageController@display');
+Route::get('print','PrintpageController@Printorder');
+
 Route::resource('free', 'FreesController');
 Route::resource('orders', 'OrdersController');
 Route::resource('ordernotify', 'OrdernotifyController');
