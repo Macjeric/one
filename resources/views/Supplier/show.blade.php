@@ -20,7 +20,7 @@
 <hr>
 <a href="/Supplier/{{$supply->id}}/edit" class="btn btn-default">Edit</a>
 
-{!!Form::open(['action' => ['SupplierController@destroy', $supply->supplier_id], 'method' => 'POST', 'class' => 'pull-right'])!!}
+{!!Form::open(['action' => ['SupplierController@destroy', $supply->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
                 {{Form::hidden('_method', 'DELETE')}}
                 {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
             {!!Form::close()!!}

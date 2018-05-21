@@ -19,7 +19,7 @@
             <th>Price</th>
             <th>Total</th>
         </tr>
-        @foreach($data as $order)
+        @foreach($dataa as $order)
         <tr>
         <td>{!!$order-> item_no!!}</td>
         <td>{!!$order-> description!!}</td>
@@ -47,7 +47,18 @@ $(document).ready(function(){
         display:none;
     } --}}
 
-<button id="printpage" onClick ="window.print()">Print</button>
+<button id="printbutton" onClick =" myfunction(); window.print();">Print</button>
+<script>
+    function myfunction(){
+        var x = document.getElementById("printbutton");
+        if(x.style.display === "none"){
+            x.style.display = "block";
+        }else{
+            x.style.display = "none"
+        }
+    }
+
+    </script>
     
     {{-- {!! Form::submit('Print',['class'=>'btn', 'class' => 'pull-right'])!!}
     {!! Form::close()!!} --}}

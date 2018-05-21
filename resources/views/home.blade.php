@@ -49,7 +49,7 @@
                    <table class="table table-stripped">
                     <tr>
                         <th>Available Stocks </th>
-                        <th><a href="/ordernotify/create">Not Available in Store</a></th>
+                        <th><a href="/requisition/create">Not Available in Store</a></th>
                         <th></th>
                     </tr>
 

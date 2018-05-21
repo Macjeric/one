@@ -3,9 +3,8 @@
 @section('content')
 @can('print_prequest')
     <h2>Purchases Requests</h2>
-    
     @if(count($posts) > 0)
-    {!!Form::open(['action' => 'PrintpageController@display', 'method' => 'GET'])!!}
+    {!!Form::open(['action' => 'PrintpageController@index', 'method' => 'GET'])!!}
     <table class="table">
         <tr><th>Post</th><th>Print</th></tr>
     @foreach($posts as $post)

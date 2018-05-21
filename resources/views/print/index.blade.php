@@ -6,7 +6,7 @@
 <h3> ONE COMPANY LIMITED </h3>
 <h1> Purchase Request</h1>
 
-{{-- {!!Form::open(['action' => ['PrintpageController@'], 'method' => 'GET'])!!} --}}
+{{-- {!!Form::open(['action' => ['PrintpageController@display'], 'method' => 'GET'])!!} --}}
     <table class="table">
         <tr>
             <th> Stock Number</th>
@@ -42,7 +42,18 @@ $(document).ready(function(){
         display:none;
     } --}}
 
-<button id="printpage" onClick ="window.print()">Print</button>
+    <button id="printbutton" onClick =" myfunction(); window.print();">Print</button>
+    <script>
+        function myfunction(){
+            var x = document.getElementById("printbutton");
+            if(x.style.display === "none"){
+                x.style.display = "block";
+            }else{
+                x.style.display = "none"
+            }
+        }
+    
+        </script>
     
     {{-- {!! Form::submit('Print',['class'=>'btn', 'class' => 'pull-right'])!!}
     {!! Form::close()!!} --}}

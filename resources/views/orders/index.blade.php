@@ -3,7 +3,7 @@
 @section('content')
     <h2>Purchase Orders</h2>
     @if(count($orders) > 0)
-    {!!Form::open(['action' => 'PrintpageController@Printorder', 'method' => 'GET'])!!}
+    {!!Form::open(['action' => 'PrintpageController@create', 'method' => 'GET'])!!}
     <table class="table">
         <tr><th>Post</th><th>Print</th></tr>
     @foreach($orders as $order)

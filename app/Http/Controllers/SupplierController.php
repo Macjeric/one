@@ -30,6 +30,8 @@ class SupplierController extends Controller
     public function create()
     {
         //
+        return view('Supplier.create');
+        
     }
 
     /**
@@ -40,7 +42,29 @@ class SupplierController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Stores the filled Items
+        $this->validate($request, [
+            'supplier_name' => 'required',
+            'supplier_address' => 'required',
+            'supplier_contact' => 'required',
+            'supplier_goods' => 'required',
+            'supplier_discounts' => 'required',
+            ]);
+
+
+            $supply = new Supplier;
+            $supply->supplier_name = $request->input('supplier_name');
+            $supply->supplier_address = $request->input('supplier_address');
+            $supply->supplier_contact = $request->input('supplier_contact');
+            $supply->supplier_goods = $request->input('supplier_goods');
+            $supply->supplier_discounts = $request->input('supplier_discounts');
+            $supply->user_id = auth()->user()->id;
+            $supply->save();
+    
+            return redirect('/Supplier')->with('success', 'Post Created');
+    
+            
+
     }
 
     /**
@@ -64,6 +88,8 @@ class SupplierController extends Controller
     public function edit($id)
     {
         //
+        $supply = Supplier::find($id);
+        return view('Supplier.edit')->with('supply', $supply);
     }
 
     /**
@@ -76,6 +102,26 @@ class SupplierController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $this->validate($request, [
+            'supplier_name' => 'required',
+            'supplier_address' => 'required',
+            'supplier_contact' => 'required',
+            'supplier_goods' => 'required',
+            'supplier_discounts' => 'required',
+            ]);
+
+
+            $supply = Supplier::find($id);
+            $supply->supplier_name = $request->input('supplier_name');
+            $supply->supplier_address = $request->input('supplier_address');
+            $supply->supplier_contact = $request->input('supplier_contact');
+            $supply->supplier_goods = $request->input('supplier_goods');
+            $supply->supplier_discounts = $request->input('supplier_discounts');
+            $supply->user_id = auth()->user()->id;
+            $supply->save();
+    
+            return redirect('/Supplier')->with('success', 'Post Updated');
+    
     }
 
     /**
@@ -87,5 +133,8 @@ class SupplierController extends Controller
     public function destroy($id)
     {
         //
+        $supply = Supplier::find($id);
+        $supply->delete();
+        return redirect('/Supplier')->with('success', 'Supplier Removed');
     }
 }
