@@ -26,14 +26,9 @@ class RequisitionsController extends Controller
      */
     public function index()
     {
-        ////Get the loggedIn user ID
-        $user_id = auth()->user()->id;
-        // $user_id = auth()->user()->department_id;
-        //Find the user_id
-        $user = User::find($user_id);
-        // Return the post for the concerned user only through relation created
+       
         $requisitions = Requisition::orderBy('created_at','desc')->paginate(10);
-        return view('requisition.index')->with('requisitions', $user->requisitions);
+        return view('requisition.index')->with('requisitions', $requisitions);
     
     }
 
