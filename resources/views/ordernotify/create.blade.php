@@ -23,12 +23,15 @@
                  <select name ="department">
                         <option value="Stores" >Stores</option>
                          <option value ="ICT" >ICT</option>
+                        <option value ="Procurement" >Procurement</option>                         
                          <option value="Engineering" >Engineering</option>
                          <option value="Accounts" >Accounts</option>
+                         <option value ="Production" >Production</option>
+                         
                          
                  </select>
          </div>
-                 <div class="form-group">
+                 {{-- <div class="form-group">
                                 {{Form::label('user_id', 'Department Manager')}}
                                 <select name ="user_id">
                                         <option value ="1" >ICT</option>
@@ -36,12 +39,13 @@
                                        <option value="4" >Engineering</option>
                                         <option value="3" >Procurement</option>
                                         <option value="5" >Accounts</option>
+                                        <option value="6" >Production</option>
                                     
                                         
-                                </select>
+                                </select> --}}
 
                 {{-- {{Form::text('department', '', ['class' => 'form-control', 'placeholder' => 'Enter the Department'])}} --}}
-                 </div>
+                 {{-- </div> --}}
 
     
 

@@ -7,7 +7,7 @@
     @foreach($notifies as $notify)
         <div class="well">
                     <h3>{{$notify->item}}</a></h3>
-                    <small>Written on {{$notify->created_at ->toDayDateTimeString() }} </small>
+                    <small>Written on {{$notify->created_at ->toDayDateTimeString()}} by {{$notify->user->name}} </small>
                         {{-- to {{$receive->user->name}}  --}}
                 </div>
         

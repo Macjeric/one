@@ -35,7 +35,7 @@ class OrdernotifyController extends Controller
      */
     public function index()
     {
-        $notifies = Ordernotify::orderBy('item','desc')->paginate(10);
+        $notifies = Ordernotify::orderBy('created_at','desc')->paginate(10);
             return view('ordernotify.index')->with('notifies', $notifies);
     }
 
@@ -63,7 +63,7 @@ class OrdernotifyController extends Controller
          $this->validate($request, [
             'item' => 'required',
             'department' => 'required',
-            'user_id'=> 'required',
+            // 'user_id'=> 'required',
             'quantity'=> 'required',
             
         
@@ -74,7 +74,7 @@ class OrdernotifyController extends Controller
          $notify->item = $request->input('item');
          $notify->quantity = $request->input('quantity');         
          $notify->department = $request->input('department');
-         $notify->user_id = $request->input('user_id');
+         $notify->user_id = auth()->user()->id;
 
          $notify->save();
 

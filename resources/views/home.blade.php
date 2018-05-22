@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard    |   <a href="/requisition">Requisitions</a> </div>
+                <div class="panel-heading">Dashboard</div>
                 {{-- <div class="pull-right">  </div> --}}
 
                                 
@@ -29,6 +29,7 @@
                    <li><a href="/receive"> Check the Stocks</a><br></li>
                    <li><a href="/ordernotify"> Check Orders</a></li>
                    <li><a href="/posts/create"> Create Purchase Request</a></li>
+                   <li><a href="/requisition">Requisitions</a></li>
                    
                    </ul>
                    @endcan
@@ -39,6 +40,7 @@
                    <li><a href="/orders/">Orders Created</a></li>
                    <li><a href="/orders/create">Create new Order</a></li>
                    <li><a href="/Supplier">Suppliers list</a></li>
+                   <li><a href="/requisition">Requisitions</a></li>
                    
                    
                    
@@ -50,7 +52,7 @@
                     @if(count($receives)>0)
                    <table class="table table-stripped">
                     <tr>
-                        <th>Available Stocks </th>
+                        <th>Available Stocks     |   <a href="/requisition">Requisitions</a> </th>
                         <th><a href="/requisition/create">Not Available in Store</a>
                         {{-- <th></th> --}}
                     </tr>
