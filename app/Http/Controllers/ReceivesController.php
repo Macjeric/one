@@ -99,7 +99,7 @@ class ReceivesController extends Controller
      */
     public function show($id)
     {
-        //
+        //find the required ID and displaying it
         $receive = Receive::find($id);
         return view('receive.show')->with('receive', $receive);
     }

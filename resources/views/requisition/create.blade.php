@@ -30,7 +30,7 @@
                          
                  </select>
          </div>
-                 <div class="form-group">
+                 {{-- <div class="form-group">
                                 {{Form::label('user_id', 'Department Manager')}}
                                 <select name ="user_id">
                                        <option value="2" >Stores</option>
@@ -41,10 +41,10 @@
                                         <option value="6" >Production</option>
                                         
                                         
-                                </select>
+                                </select> --}}
 
                 {{-- {{Form::text('department', '', ['class' => 'form-control', 'placeholder' => 'Enter the Department'])}} --}}
-                 </div>
+                 {{-- </div> --}}
 
      
 

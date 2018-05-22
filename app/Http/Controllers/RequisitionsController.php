@@ -52,7 +52,22 @@ class RequisitionsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Making sure that the forms are filled
+        $this->validate($request, [
+            'description' => 'required',
+            'quantity' => 'required',
+            'department' => 'required',
+            ]);
+            
+        $requisition = new Requisition;
+        $requisition->description = $request->input('description');
+        $requisition->quantity = $request->input('quantity');
+        $requisition->department = $request->input('department');
+        $requisition->user_id = auth()->user()->id;
+        $requisition->save();
+
+        return redirect('/requisition')->with('success', 'Requisition Created');
+        
     }
 
     /**
@@ -63,7 +78,9 @@ class RequisitionsController extends Controller
      */
     public function show($id)
     {
-        //
+        //find the required ID and displaying it
+        $requisition = requisition::find($id);
+        return view('requisition.show')->with('requisition', $requisition);
     }
 
     /**
@@ -75,6 +92,8 @@ class RequisitionsController extends Controller
     public function edit($id)
     {
         //
+        $requisition = Requisition::find($id);
+        return view('requisition.edit')->with('requisition', $requisition);
     }
 
     /**
@@ -87,6 +106,21 @@ class RequisitionsController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $this->validate($request, [
+            'description' => 'required',
+            'quantity' => 'required',
+            'department' => 'required',
+
+            ]);
+            
+        $requisition = Requisition::find($id);
+        $requisition->description = $request->input('description');
+        $requisition->quantity = $request->input('quantity');
+        $requisition->department = $request->input('department');
+        $requisition->user_id = auth()->user()->id;
+        $requisition->save();
+
+        return redirect('/requisition')->with('success', 'Requisition Updated');
     }
 
     /**

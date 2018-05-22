@@ -7,7 +7,7 @@
     @foreach($receives as $receive)
         <div class="well">
                     <h3><a href="/receive/{{$receive->id}}">{{$receive->department}}</a></h3>
-                    <small>Written on {{$receive->created_at ->toDayDateTimeString() }} </small>
+                    <small>Written on {{$receive->created_at ->toDayDateTimeString() }} Approved by {{$receive->user->name }} </small>
                         {{-- to {{$receive->user->name}}  --}}
                 </div>
         

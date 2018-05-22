@@ -5,8 +5,10 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+                <div class="panel-heading">Dashboard    |   <a href="/requisition">Requisitions</a> </div>
+                {{-- <div class="pull-right">  </div> --}}
 
+                                
                 <div class="panel-body">
                     @if (session('status'))
                         <div class="alert alert-success">
@@ -49,8 +51,8 @@
                    <table class="table table-stripped">
                     <tr>
                         <th>Available Stocks </th>
-                        <th><a href="/requisition/create">Not Available in Store</a></th>
-                        <th></th>
+                        <th><a href="/requisition/create">Not Available in Store</a>
+                        {{-- <th></th> --}}
                     </tr>
 
                     
