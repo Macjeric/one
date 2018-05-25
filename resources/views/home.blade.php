@@ -18,6 +18,7 @@
  
                    {{-- <p> You are logged in!</p> --}}
                    {{-- <p> LoggedIn as {{ Auth::user()->name }}</p> --}}
+                    <a href="/ordersmade/{{Auth::user()->id}}"><b>Orders Made</b></a> </th>
 
                    @can('user_admin')
 
@@ -53,7 +54,7 @@
                    <table class="table table-stripped">
                     <tr>
                         <th>Available Stocks     |   <a href="/report/{{Auth::user()->id}}">Requisitions</a> </th>
-                        <th><a href="/requisition/create">Not Available in Store</a>
+                        <th><a href="/requisition/create">Not Available in Store?</a> 
                         {{-- <th></th> --}}
                     </tr>
 

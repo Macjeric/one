@@ -1,48 +1,63 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Orders</div>
 
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                   
-                   
-                    @if(count($notifies)>0)
-                   <table class="table table-stripped">
-                    <tr>
-                        <th>Stock Orders Made</th>
-                        <th></th>
-                        <th></th>
-                    </tr>
+<h3> ONE COMPANY LIMITED </h3>
+<h1> Orders Made</h1>
 
-                    
-                   @foreach($notifies as $notify)
-                   
+{{-- {!!Form::open(['action' => ['PrintpageController@display'], 'method' => 'GET'])!!} --}}
+    <table class="table">
+        <tr>
+            <th> Item</th>
+            <th>Quantity</th>
+            <th>Department</th>
+            <th>Written At</th>
+            <th>Changed At</th>
+            {{-- <th>Approved By </th> --}}
+            
+    
+        </tr>
+        @foreach($order as $notify)
+        <tr>
+        <td>{!!$notify-> item!!}</td>
+        <td>{!!$notify-> quantity!!}</td>
+        <td>{!!$notify-> department!!}</td>        
+        <td>{!!$notify-> created_at!!}</td>
+        <td>{!!$notify-> updated_at!!}</td>
+        {{-- <td>{!!$notify-> user->name!!}</td> --}}
+        
+        </tr>
+        @endforeach
+    </table>
 
-                   <tr>
-                       <td>{{$notify->item}}</td>
-                      
-                   </tr>
-                   @endforeach
-                </table>
-                @endif
-                       
+{{-- <a href="{{URL::to('print/printview')}}" class="btnPrint">Print</a> 
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.btnPrint').printPage();
+});
+</script> --}}
 
-                    
+{{-- @media print{ --}}
+    {{-- #printpage{
+        display:none;
+    } --}}
 
-
-               
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    <button id="printbutton" onClick =" myfunction(); window.print();">Print</button>
+    <script>
+        function myfunction(){
+            var x = document.getElementById("printbutton");
+            if(x.style.display === "none"){
+                x.style.display = "block";
+            }else{
+                x.style.display = "none"
+            }
+        }
+    
+        </script>
+    
+    {{-- {!! Form::submit('Print',['class'=>'btn', 'class' => 'pull-right'])!!}
+    {!! Form::close()!!} --}}
 @endsection
+
+
+        

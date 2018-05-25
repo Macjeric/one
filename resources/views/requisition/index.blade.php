@@ -14,6 +14,8 @@
             <th>Department</th>
             <th>Written At</th>
             <th>Changed At</th>
+            <th>Approved By</th>
+            
     
         </tr>
         @foreach($requisitions as $requisition)
@@ -22,7 +24,9 @@
         <td>{!!$requisition-> quantity!!}</td>
         <td>{!!$requisition-> department!!}</td>        
         <td>{!!$requisition-> created_at->toDayDateTimeString()!!}</td>
-        <td>{!!$requisition-> updated_at!!}</td>
+        <td>{!!$requisition-> updated_at->toDayDateTimeString()!!}</td>
+        <td>{!!$requisition-> user->name!!}</td>
+        
         </tr>
         @endforeach
     </table>

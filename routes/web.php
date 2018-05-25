@@ -22,7 +22,7 @@ Route::resource('print', 'PrintpageController');
 Route::resource('free', 'FreesController');
 Route::resource('orders', 'OrdersController');
 Route::resource('ordernotify', 'OrdernotifyController');
-Route::get('/ordersmade', 'OrdersMadeController@index')->name('ordersmade');
+Route::get('/ordersmade/{id}', 'OrdersMadeController@index');
 Route::resource('Admin', 'AdminsController');
 Route::resource('Supplier', 'SupplierController');
 Route::resource('requisition', 'RequisitionsController');
