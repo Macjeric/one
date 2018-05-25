@@ -30,6 +30,8 @@
                          <option value="Engineering" >Engineering</option>
                          <option value="Accounts" >Accounts</option>
                          <option value ="Production" >Production</option>
+                         <option value ="Marketing" >Marketing</option>
+                         
                          
                          
                  </select>
@@ -43,6 +45,8 @@
                                         <option value="3" >Procurement</option>
                                         <option value="5" >Accounts</option>
                                         <option value="6" >Production</option>
+                                        <option value="7" >Markerting</option>
+                                        
                                         
                                         
                                 </select>

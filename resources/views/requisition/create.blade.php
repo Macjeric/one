@@ -25,6 +25,7 @@
                          <option value ="ICT" >ICT</option>
                          <option value="Engineering" >Engineering</option>
                          <option value="Accounts" >Accounts</option>
+                         <option value="Marketing" >Marketing</option>
                          <option value ="Production" >Production</option>
                          
                          

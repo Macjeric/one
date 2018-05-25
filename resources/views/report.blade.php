@@ -2,7 +2,6 @@
 
 @section('content')
 
-@can('enter_stocks')
 <h3> ONE COMPANY LIMITED </h3>
 <h1> Requisitions Made</h1>
 
@@ -16,12 +15,12 @@
             <th>Changed At</th>
     
         </tr>
-        @foreach($requisitions as $requisition)
+        @foreach($requis as $requisition)
         <tr>
         <td>{!!$requisition-> description!!}</td>
         <td>{!!$requisition-> quantity!!}</td>
         <td>{!!$requisition-> department!!}</td>        
-        <td>{!!$requisition-> created_at->toDayDateTimeString()!!}</td>
+        <td>{!!$requisition-> created_at!!}</td>
         <td>{!!$requisition-> updated_at!!}</td>
         </tr>
         @endforeach
@@ -54,7 +53,7 @@ $(document).ready(function(){
     
     {{-- {!! Form::submit('Print',['class'=>'btn', 'class' => 'pull-right'])!!}
     {!! Form::close()!!} --}}
-    @endcan
+    
 @endsection
 
 

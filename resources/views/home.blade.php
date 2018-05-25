@@ -52,7 +52,7 @@
                     @if(count($receives)>0)
                    <table class="table table-stripped">
                     <tr>
-                        <th>Available Stocks     |   <a href="/requisition">Requisitions</a> </th>
+                        <th>Available Stocks     |   <a href="/report/{{Auth::user()->id}}">Requisitions</a> </th>
                         <th><a href="/requisition/create">Not Available in Store</a>
                         {{-- <th></th> --}}
                     </tr>

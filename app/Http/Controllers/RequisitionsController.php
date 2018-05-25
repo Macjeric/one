@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Requisition;
 use App\User;
 
-
 class RequisitionsController extends Controller
 {
 /**
@@ -26,7 +25,7 @@ class RequisitionsController extends Controller
      */
     public function index()
     {
-       
+    
         $requisitions = Requisition::orderBy('created_at','desc')->paginate(10);
         return view('requisition.index')->with('requisitions', $requisitions);
     
@@ -120,7 +119,7 @@ class RequisitionsController extends Controller
         $requisition->user_id = auth()->user()->id;
         $requisition->save();
 
-        return redirect('/requisition')->with('success', 'Requisition Updated');
+        return redirect('/requisreport.index')->with('success', 'Requisition Updated');
     }
 
     /**

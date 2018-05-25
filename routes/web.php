@@ -26,6 +26,10 @@ Route::get('/ordersmade', 'OrdersMadeController@index')->name('ordersmade');
 Route::resource('Admin', 'AdminsController');
 Route::resource('Supplier', 'SupplierController');
 Route::resource('requisition', 'RequisitionsController');
+Route::get('/report/{id}', 'RequisReportController@index');
+
+
+
 
 
 

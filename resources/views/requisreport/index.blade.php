@@ -2,9 +2,9 @@
 
 @section('content')
 
-@can('enter_stocks')
+@can('print_prequest')
 <h3> ONE COMPANY LIMITED </h3>
-<h1> Requisitions Made</h1>
+<h1> Purchase Request</h1>
 
 {{-- {!!Form::open(['action' => ['PrintpageController@display'], 'method' => 'GET'])!!} --}}
     <table class="table">
@@ -16,13 +16,13 @@
             <th>Changed At</th>
     
         </tr>
-        @foreach($requisitions as $requisition)
+        @foreach($data as $requis)
         <tr>
-        <td>{!!$requisition-> description!!}</td>
-        <td>{!!$requisition-> quantity!!}</td>
-        <td>{!!$requisition-> department!!}</td>        
-        <td>{!!$requisition-> created_at->toDayDateTimeString()!!}</td>
-        <td>{!!$requisition-> updated_at!!}</td>
+        <td>{!!$requis-> description!!}</td>
+        <td>{!!$requis-> quantity!!}</td>
+        <td>{!!$requis-> department!!}</td>        
+        <td>{!!$requis-> created_at!!}</td>
+        <td>{!!$requis-> updated_at!!}</td>
         </tr>
         @endforeach
     </table>
@@ -54,6 +54,7 @@ $(document).ready(function(){
     
     {{-- {!! Form::submit('Print',['class'=>'btn', 'class' => 'pull-right'])!!}
     {!! Form::close()!!} --}}
+    
     @endcan
 @endsection
 
