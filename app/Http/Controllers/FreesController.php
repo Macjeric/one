@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Free;
 use App\Post;
+use App\Ordernotify;
+use App\User;
+use Auth;
+use Carbon\Carbon;
 
 class FreesController extends Controller
 {
@@ -28,6 +32,7 @@ class FreesController extends Controller
     public function create()
     {
         //
+        
     }
 
     /**

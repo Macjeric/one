@@ -27,6 +27,15 @@ Route::resource('Admin', 'AdminsController');
 Route::resource('Supplier', 'SupplierController');
 Route::resource('requisition', 'RequisitionsController');
 Route::get('/report/{id}', 'RequisReportController@index');
+Route::get('madeorders', 'OrdersMadeController@md');
+Route::get('make-buy', 'MakeBuysController@calc');
+Route::post('make-buy/decision', 'MakeBuysController@calc');
+Route::get('Supplier/{id}/performance', 'SupplierController@perform');
+
+
+
+
+
 
 
 

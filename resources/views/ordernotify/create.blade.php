@@ -5,6 +5,9 @@
 @can('purchase_request') --}}
     <h2>Create Order</h2>
 
+        <a href="/ordersmade/{{Auth::user()->id}}" class="btn btn-default"><b>Orders Made</b></a> </th><br></br>
+        
+
     {!! Form::open(['action' => 'OrdernotifyController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
     
 

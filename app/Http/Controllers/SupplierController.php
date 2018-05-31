@@ -58,10 +58,13 @@ class SupplierController extends Controller
             $supply->supplier_contact = $request->input('supplier_contact');
             $supply->supplier_goods = $request->input('supplier_goods');
             $supply->supplier_discounts = $request->input('supplier_discounts');
+            $supply->delivery_time = $request->input('delivery_time');
+            $supply->goods_guarantee = $request->input('goods_guarantee');
+            $supply->g_quality = $request->input('g_quality');
             $supply->user_id = auth()->user()->id;
             $supply->save();
     
-            return redirect('/Supplier')->with('success', 'Post Created');
+            return redirect('/Supplier')->with('success', 'Supplier Created');
     
             
 
@@ -117,6 +120,14 @@ class SupplierController extends Controller
             $supply->supplier_contact = $request->input('supplier_contact');
             $supply->supplier_goods = $request->input('supplier_goods');
             $supply->supplier_discounts = $request->input('supplier_discounts');
+            $supply->delivery_time = $request->input('delivery_time');
+            $supply->goods_guarantee = $request->input('goods_guarantee');
+            $supply->g_quality = $request->input('g_quality');
+            
+            
+            
+            
+            
             $supply->user_id = auth()->user()->id;
             $supply->save();
     
@@ -137,4 +148,10 @@ class SupplierController extends Controller
         $supply->delete();
         return redirect('/Supplier')->with('success', 'Supplier Removed');
     }
+
+    public function perform(){
+        $supplier = Supplier::all();        
+        return view ('Supplier.performance')->with('supplier', $supplier);
+    }
+
 }

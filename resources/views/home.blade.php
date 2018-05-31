@@ -18,7 +18,6 @@
  
                    {{-- <p> You are logged in!</p> --}}
                    {{-- <p> LoggedIn as {{ Auth::user()->name }}</p> --}}
-                    <a href="/ordersmade/{{Auth::user()->id}}"><b>Orders Made</b></a> </th>
 
                    @can('user_admin')
 
@@ -41,7 +40,7 @@
                    <li><a href="/orders/">Orders Created</a></li>
                    <li><a href="/orders/create">Create new Order</a></li>
                    <li><a href="/Supplier">Suppliers list</a></li>
-                   <li><a href="/requisition">Requisitions</a></li>
+                   {{-- <li><a href="/requisition">Requisitions</a></li> --}}
                    
                    
                    

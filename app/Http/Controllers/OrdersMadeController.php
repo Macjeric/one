@@ -32,9 +32,11 @@ class OrdersMadeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function md()
     {
         //
+        $notifies = Ordernotify::orderBy('created_at','desc')->paginate(10);
+        return view('madeorders')->with('notifies', $notifies);
     }
 
     /**

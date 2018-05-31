@@ -14,7 +14,7 @@
             <th>Department</th>
             <th>Written At</th>
             <th>Changed At</th>
-            <th>Approved By </th>
+            <th>Ordered By </th>
             
     
         </tr>

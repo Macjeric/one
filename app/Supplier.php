@@ -11,7 +11,7 @@ class Supplier extends Model
      // Primary Key
      public $primaryKey = 'id';
      // Timestamps
-     public $timestamps = true;
+    //  public $timestamps = true;
  
      //Creating a relationship btn a post and a user(single post)
      public function user(){
