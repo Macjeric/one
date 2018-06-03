@@ -25,11 +25,15 @@
 
                    @can('enter_stocks')
                    <ul>
-                   <li><a href="/receive/create"> Enter Stock</a><br></li>
+                   <li><a href="/receive/create"> Enter Stock for User</a><br></li>
                    <li><a href="/receive"> Check the Stocks</a><br></li>
                    <li><a href="/ordernotify"> Check Orders</a></li>
                    <li><a href="/posts/create"> Create Purchase Request</a></li>
                    <li><a href="/requisition">Requisitions</a></li>
+                   <li><a href="/store">All Stocks</a></li>
+                   <li><a href="/store/create"> Enter Stock Main Store</a><br></li>
+                   
+                   
                    
                    </ul>
                    @endcan

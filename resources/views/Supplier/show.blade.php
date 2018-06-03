@@ -28,7 +28,7 @@
   type: 'bar'
 }];
 var layout = {
-  title: 'Number of Graphs Made this Week',
+
 }
 Plotly.newPlot('myDiv', data);
   </script>

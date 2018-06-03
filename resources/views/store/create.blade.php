@@ -3,9 +3,9 @@
 @section('content')
 @can('enter_stocks')
 @can('purchase_request')
-    <h2>Goods Received (Department)</h2>
+    <h2>Goods Received Main Store</h2>
 
-    {!! Form::open(['action' => 'ReceivesController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+    {!! Form::open(['action' => 'MainStoreController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
     <div class="form-group">
             {{Form::label('supplier_name', 'Supplier Name')}}
             {{Form::text('supplier_name', '', ['class' => 'form-control', 'placeholder' => 'Enter the Name'])}}

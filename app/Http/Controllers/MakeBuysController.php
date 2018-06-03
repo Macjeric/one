@@ -7,16 +7,20 @@ use Illuminate\Http\Request;
 class MakeBuysController extends Controller
 {
     //
-    public function calc(Request $request)
+    public function calc()
     {
         //
-        $Bprice = 5000;
-        $Lamount = 50;
-        // $days = 'days';
-        // if(Lamount>0){
-        $days = $Bprice/$Lamount;
-        // }
-        
-        return view('make-buy')->with('days', $days);
+    //    if( isset ($_GET ['Bprice']) && isset($_GET ['Lamount'])){
+    //        $Bprice = $_GET ['Bprice'];
+    //        $Lamount = $_GET ['Lamount'];
+    //        if($Bprice>=$Lamount){
+    //         $days = $Bprice/$Lamount;
+    //        }else
+    //        echo "Not valid input";
+           
+    //    }
+       return view('make-buy');
+       
+    
     }
 }

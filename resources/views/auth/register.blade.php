@@ -16,7 +16,7 @@
                             <label for="name" class="col-md-4 control-label">Name</label>
 
                             <div class="col-md-6">
-                                <input id="name" pattern="[a-zA-Z]" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="name" pattern="[A-Za-z]+" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
 
                                 @if ($errors->has('name'))
                                     <span class="help-block">
@@ -59,7 +59,7 @@
                             <label for="password" class="col-md-4 control-label">Password</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+                                <input id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,}" type="password" class="form-control" name="password" required>
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
