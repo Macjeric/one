@@ -3,29 +3,32 @@
 @section('content')
 
 @can('print_prequest')
-<h3> ONE COMPANY LIMITED </h3>
-<h1> Purchase Request</h1>
-
+<div style="text-align:center">
+<h2> ONE COMPANY LIMITED </h2>
+<h3> Purchases Request</h3>
+</div>
 {{-- {!!Form::open(['action' => ['PrintpageController@display'], 'method' => 'GET'])!!} --}}
     <table class="table">
         <tr>
             <th> Stock Number</th>
             <th>Stock Name</th>
             <th>Quantity</th>
-            <th>Price</th>
-            <th>Discount</th>
             <th>Tax Code</th>
             <th>Department</th>
+            <th>Posted on</th>            
+            <th>By</th>
+            
         </tr>
         @foreach($data as $post)
         <tr>
         <td>{!!$post-> StockNumber!!}</td>
         <td>{!!$post-> StockName!!}</td>
         <td>{!!$post-> Quantity!!}</td>
-        <td>{!!$post-> PriceInfo!!}</td>
-        <td>{!!$post-> Discount!!}</td>
         <td>{!!$post-> TAX!!}</td>
         <td>{!!$post-> Department!!}</td>
+        <td>{!!$post-> created_at!!}</td>        
+        <td>{!!$post-> user->name!!}</td>
+        
         </tr>
         @endforeach
     </table>

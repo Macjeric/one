@@ -3,8 +3,10 @@
 @section('content')
 
 @can('enter_stocks')
-<h3> ONE COMPANY LIMITED </h3>
-<h1> Requisitions Made</h1>
+<div style="text-align:center">
+<h2> ONE COMPANY LIMITED </h2>
+<h3> Requisitions Made</h3>
+</div>
 
 {{-- {!!Form::open(['action' => ['PrintpageController@display'], 'method' => 'GET'])!!} --}}
     <table class="table">

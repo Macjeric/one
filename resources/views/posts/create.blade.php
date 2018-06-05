@@ -25,15 +25,6 @@
                     {{Form::text('Department', '', ['class' => 'form-control', 'placeholder' => 'Department Name'])}}
                          </div>
 
-             <div class="form-group">
-                    {{Form::label('PriceInfo', 'Price Info')}}
-                    {{Form::text('PriceInfo', '', ['class' => 'form-control', 'placeholder' => 'Enter Price'])}}
-                </div>
-
-            <div class="form-group">
-            {{Form::label('Discount', 'Discount')}}
-            {{Form::text('Discount', '', ['class' => 'form-control', 'placeholder' => 'Discount'])}}
-        </div>
 
         <div class="form-group">
                 {{Form::label('TAX', 'TAX')}}

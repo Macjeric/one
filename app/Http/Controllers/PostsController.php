@@ -122,9 +122,7 @@ class PostsController extends Controller
             'StockName' => 'required',
             'StockNumber' => 'required',
             'Department' => 'required',
-            'Discount' => 'required',
             'Quantity' => 'required',
-            'PriceInfo' => 'required',
             'TAX' => 'required',
             
         ]);
@@ -134,9 +132,7 @@ class PostsController extends Controller
         $post->StockName = $request->input('StockName');
         $post->StockNumber = $request->input('StockNumber');
         $post->Quantity = $request->input('Quantity');
-        $post->PriceInfo = $request->input('PriceInfo');
         $post->TAX = $request->input('TAX');
-        $post->Discount = $request->input('Discount');
         $post->Department = $request->input('Department');
         $post->user_id = auth()->user()->id;
         $post->save();
