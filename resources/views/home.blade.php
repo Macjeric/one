@@ -44,7 +44,7 @@
                    <li><a href="/orders/">Orders Created</a></li>
                    <li><a href="/orders/create">Create new Order</a></li>
                    <li><a href="/Supplier">Suppliers list</a></li>
-                   {{-- <li><a href="/requisition">Requisitions</a></li> --}}
+                   <li><a href="/make-buy">Lease/Buy</a></li>
                    
                    
                    
