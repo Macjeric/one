@@ -5,34 +5,30 @@
 @can('enter_stocks')
 <div style="text-align:center">
 <h2> ONE COMPANY LIMITED </h2>
-<h3> Requisitions Made</h3>
+<h3> Orders Made</h3>
 </div>
 
-{!!Form::open(['action' => ['PrintpageController@display'], 'method' => 'GET'])!!}
+{{-- {!!Form::open(['action' => ['PrintpageController@display'], 'method' => 'GET'])!!} --}}
     <table class="table">
         <tr>
-            <th> Description</th>
+            <th> Item</th>
             <th>Quantity</th>
             <th>Department</th>
             <th>Written At</th>
             <th>Changed At</th>
-            <th>Approved By</th>
-            <th>{!! Form::submit('Next')!!} </th>
+            <th>Ordered By </th>
             
             
     
         </tr>
-        @foreach($requisitions as $requisition)
+        @foreach($ordernot as $notify)
         <tr>
-        <td>{!!$requisition-> description!!}</td>
-        <td>{!!$requisition-> quantity!!}</td>
-        <td>{!!$requisition-> department!!}</td>        
-        <td>{!!$requisition-> created_at->toDayDateTimeString()!!}</td>
-        <td>{!!$requisition-> updated_at->toDayDateTimeString()!!}</td>
-        <td>{!!$requisition-> user->name!!}</td>
-        <td>{{Form::checkbox('checkbox[]',$requisition->id)}}</td>
-        
-        
+        <td>{!!$notify-> item!!}</td>
+        <td>{!!$notify-> quantity!!}</td>
+        <td>{!!$notify-> department!!}</td>        
+        <td>{!!$notify-> created_at->toDayDateTimeString()!!}</td>
+        <td>{!!$notify-> updated_at->toDayDateTimeString()!!}</td>
+        <td>{!!$notify-> user->name!!}</td>
         </tr>
         @endforeach
     </table>
@@ -49,7 +45,7 @@ $(document).ready(function(){
         display:none;
     } --}}
 
-    {{-- <button id="printbutton" onClick =" myfunction(); window.print();">Print</button>
+    <button id="printbutton" onClick =" myfunction(); window.print();">Print</button>
     <script>
         function myfunction(){
             var x = document.getElementById("printbutton");
@@ -60,7 +56,7 @@ $(document).ready(function(){
             }
         }
     
-        </script> --}}
+        </script>
     
     {{-- {!! Form::submit('Print',['class'=>'btn', 'class' => 'pull-right'])!!}
     {!! Form::close()!!} --}}

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Ordernotify;
-use App\Receive;
 use App\User;
 use App\Post;
 

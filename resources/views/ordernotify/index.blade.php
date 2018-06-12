@@ -8,7 +8,7 @@
 <h3> Orders Made</h3>
 </div>
 
-{{-- {!!Form::open(['action' => ['PrintpageController@display'], 'method' => 'GET'])!!} --}}
+{!!Form::open(['action' => ['OrdermonthController@ordernotify'], 'method' => 'GET'])!!}
     <table class="table">
         <tr>
             <th> Item</th>
@@ -17,6 +17,23 @@
             <th>Written At</th>
             <th>Changed At</th>
             <th>Ordered By </th>
+            <th>{{Form::label('months', 'Month:')}}
+                    <select name ="month">
+                            <option value ="1" >1</option>
+                           <option value="2" >2</option>
+                           <option value="3" >3</option>                            
+                            <option value="4" >4</option>
+                            <option value="5" >5</option>
+                            <option value="6" >6</option>
+                            <option value="7" >7</option>
+                            <option value="8" >8</option>
+                            <option value="9" >9</option>
+                            <option value="10" >10</option>
+                            <option value="11" >11</option>
+                            <option value="12" >12</option> 
+                    </select></th>
+            <th>{!! Form::submit('Next')!!} </th>
+            
             
     
         </tr>
@@ -28,7 +45,6 @@
         <td>{!!$notify-> created_at->toDayDateTimeString()!!}</td>
         <td>{!!$notify-> updated_at->toDayDateTimeString()!!}</td>
         <td>{!!$notify-> user->name!!}</td>
-        
         </tr>
         @endforeach
     </table>
@@ -45,7 +61,7 @@ $(document).ready(function(){
         display:none;
     } --}}
 
-    <button id="printbutton" onClick =" myfunction(); window.print();">Print</button>
+    {{-- <button id="printbutton" onClick =" myfunction(); window.print();">Print</button>
     <script>
         function myfunction(){
             var x = document.getElementById("printbutton");
@@ -56,7 +72,7 @@ $(document).ready(function(){
             }
         }
     
-        </script>
+        </script> --}}
     
     {{-- {!! Form::submit('Print',['class'=>'btn', 'class' => 'pull-right'])!!}
     {!! Form::close()!!} --}}

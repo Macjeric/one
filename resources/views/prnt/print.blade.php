@@ -2,35 +2,34 @@
 
 @section('content')
 
-@can('print_prequest')
+@can('enter_stocks')
 <div style="text-align:center">
-<h3> ONE COMPANY LIMITED </h3>
-<h1> Purchase Order</h1>
+<h2> ONE COMPANY LIMITED </h2>
+<h3> Received Goods</h3>
 </div>
+
 {{-- {!!Form::open(['action' => ['PrintpageController@'], 'method' => 'GET'])!!} --}}
     <table class="table">
         <tr>
-            <th> Item no</th>
-            <th> Description</th>
+            <th> Supplier Name</th>
+            <th> Suppiler Address</th>
+            <th>Item Description</th>
             <th>Department</th>
+            <th>Received</th>
             <th>Quantity</th>
-            <th>UOM</th>
-            <th>Supplier Name</th>
-            <th>Supplier Address</th>
-            <th>Price</th>
+            <th>Price Each</th>
             <th>Total</th>
         </tr>
-        @foreach($dataa as $order)
+        @foreach($rece as $receive)
         <tr>
-        <td>{!!$order-> item_no!!}</td>
-        <td>{!!$order-> description!!}</td>
-        <td>{!!$order-> department!!}</td>
-        <td>{!!$order-> quantity!!}</td>
-        <td>{!!$order-> uom!!}</td>
-        <td>{!!$order-> supplier_name!!}</td>
-        <td>{!!$order-> supplier_address!!}</td>
-        <td>{!!$order-> price!!}</td>
-        <td>{!!$order-> total!!}</td>
+        <td>{!!$receive-> supplier_name!!}</td>
+        <td>{!!$receive-> supplier_address!!}</td>
+        <td>{!!$receive-> item!!}</td>
+        <td>{!!$receive-> department!!}</td>
+        <td>{!!$receive-> received!!}</td>
+        <td>{!!$receive-> quantity!!}</td>
+        <td>{!!$receive-> price_each!!}</td>
+        <td>{!!$receive-> total!!}</td>
         
         </tr>
         @endforeach

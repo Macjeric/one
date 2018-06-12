@@ -8,7 +8,7 @@
 <h3> Requisitions Made</h3>
 </div>
 
-{!!Form::open(['action' => ['PrintpageController@display'], 'method' => 'GET'])!!}
+{{-- {!!Form::open(['action' => ['PrintpageController@display'], 'method' => 'GET'])!!} --}}
     <table class="table">
         <tr>
             <th> Description</th>
@@ -17,12 +17,11 @@
             <th>Written At</th>
             <th>Changed At</th>
             <th>Approved By</th>
-            <th>{!! Form::submit('Next')!!} </th>
             
             
     
         </tr>
-        @foreach($requisitions as $requisition)
+        @foreach($req as $requisition)
         <tr>
         <td>{!!$requisition-> description!!}</td>
         <td>{!!$requisition-> quantity!!}</td>
@@ -30,7 +29,6 @@
         <td>{!!$requisition-> created_at->toDayDateTimeString()!!}</td>
         <td>{!!$requisition-> updated_at->toDayDateTimeString()!!}</td>
         <td>{!!$requisition-> user->name!!}</td>
-        <td>{{Form::checkbox('checkbox[]',$requisition->id)}}</td>
         
         
         </tr>
@@ -49,7 +47,7 @@ $(document).ready(function(){
         display:none;
     } --}}
 
-    {{-- <button id="printbutton" onClick =" myfunction(); window.print();">Print</button>
+    <button id="printbutton" onClick =" myfunction(); window.print();">Print</button>
     <script>
         function myfunction(){
             var x = document.getElementById("printbutton");
@@ -60,7 +58,7 @@ $(document).ready(function(){
             }
         }
     
-        </script> --}}
+        </script>
     
     {{-- {!! Form::submit('Print',['class'=>'btn', 'class' => 'pull-right'])!!}
     {!! Form::close()!!} --}}

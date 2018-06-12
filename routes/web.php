@@ -30,6 +30,16 @@ Route::get('/report/{id}', 'RequisReportController@index');
 Route::get('madeorders', 'OrdersMadeController@md');
 Route::get('/make-buy', 'MakeBuysController@calc');
 Route::resource('/store', 'MainStoreController');
+// Route::get('/prnt', 'PrintpageController@receive');
+Route::get('/prnt', 'MonthsController@receive');
+Route::get('ordernotfy', 'OrdermonthController@ordernotify');
+
+
+Route::get('/requisrep', 'PrintpageController@display');
+Route::get('/others', 'PrintpageController@others');
+
+
+
 
 
 

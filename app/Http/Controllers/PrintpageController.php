@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Input;
 use App\Printpage;
 use App\Post;
 use App\Order;
+use App\Receive;
+use App\Ordernotify;
+use App\Requisition;
 
 
 class PrintpageController extends Controller
@@ -115,10 +118,10 @@ class PrintpageController extends Controller
         $data = Input::get('checkbox');
         $count = count($data);
         if($count > 0){
-            $post = Post:: find($data);
-            return view('print.index')->with('data', $post);
+            $req = Requisition:: find($data);
+            return view('requisrep')->with('req', $req);
         }else{
-            return redirect('posts')->with('error','Nothing selected');
+            return redirect('requisition')->with('error','Nothing selected');
         }
     }
 
@@ -141,5 +144,44 @@ class PrintpageController extends Controller
         }
     }
 
+    public function receive()
+    {
+        //Find the data to be displayed
+        $dataa = Input::get('checkbox');
+        $count = count($dataa);
+        if($count > 0){
+            $receive = Receive:: find($dataa);
+            return view('prnt')->with('dataa', $receive);
+        }else{
+            return redirect('receive')->with('error','Nothing selected');
+        }
+    }
+
+
+    public function ordernotify()
+    {
+        //Find the data to be displayed
+        $dataa = Input::get('checkbox');
+        $count = count($dataa);
+        if($count > 0){
+            $order = Ordernotify:: find($dataa);
+            return view('ordernotfy')->with('dataa', $order);
+        }else{
+            return redirect('ordernotify')->with('error','Nothing selected');
+        }
+    }
+
+    public function others()
+    {
+        //Find the data to be displayed
+        $dataa = Input::get('checkbox');
+        $count = count($dataa);
+        if($count > 0){
+            $order = Requisition:: find($dataa);
+            return view('others')->with('dataa', $order);
+        }else{
+            return redirect('requisition')->with('error','Nothing selected');
+        }
+    }
 
 }

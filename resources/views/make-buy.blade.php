@@ -45,7 +45,7 @@ often cheaper for meeting short-term needs, but more expensive for long-term nee
 <body>
 
 <label>Buying Price:</label> <input type="text" id="n1"/><br/><br/>
-<label>Lease Amount:</label> <input type="text" id="n2"/><br/><br/>
+<label>Lease Amount/day:</label> <input type="text" id="n2"/><br/><br/>
 
 <select id="operators">
   

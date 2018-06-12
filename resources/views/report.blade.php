@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-
-<h3> ONE COMPANY LIMITED </h3>
-<h1> Requisitions Made</h1>
-
-{{-- {!!Form::open(['action' => ['PrintpageController@display'], 'method' => 'GET'])!!} --}}
+<div style="text-align:center">
+<h2> ONE COMPANY LIMITED </h2>
+<h3> Requisitions Made</h3>
+</div>
+{!!Form::open(['action' => ['PrintpageController@others'], 'method' => 'GET'])!!}
     <table class="table">
         <tr>
             <th> Description</th>
@@ -13,6 +13,8 @@
             <th>Department</th>
             <th>Written At</th>
             <th>Changed At</th>
+            <th>{!! Form::submit('Next')!!} </th>
+            
     
         </tr>
         @foreach($requis as $requisition)
@@ -22,6 +24,8 @@
         <td>{!!$requisition-> department!!}</td>        
         <td>{!!$requisition-> created_at!!}</td>
         <td>{!!$requisition-> updated_at!!}</td>
+        <td>{{Form::checkbox('checkbox[]',$requisition->id)}}</td>
+        
         </tr>
         @endforeach
     </table>
@@ -38,7 +42,7 @@ $(document).ready(function(){
         display:none;
     } --}}
 
-    <button id="printbutton" onClick =" myfunction(); window.print();">Print</button>
+    {{-- <button id="printbutton" onClick =" myfunction(); window.print();">Print</button>
     <script>
         function myfunction(){
             var x = document.getElementById("printbutton");
@@ -48,8 +52,8 @@ $(document).ready(function(){
                 x.style.display = "none"
             }
         }
-    
-        </script>
+     --}}
+        {{-- </script> --}}
     
     {{-- {!! Form::submit('Print',['class'=>'btn', 'class' => 'pull-right'])!!}
     {!! Form::close()!!} --}}
