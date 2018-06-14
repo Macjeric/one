@@ -19,7 +19,7 @@ class MonthsController extends Controller
 
         $rece = Receive::whereMonth('created_at','=', $request->month)
         ->get();
-        return view('print')->with('rece', $rece);
+        return view('prnt.print')->with('rece', $rece);
 
     }
 

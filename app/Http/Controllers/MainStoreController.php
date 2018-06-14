@@ -29,7 +29,7 @@ class MainStoreController extends Controller
     public function index()
     {
         //
-        $mains = Mainstore::orderBy('created_at','desc')->paginate(10);
+        $mains = Mainstore::orderBy('created_at','desc')->paginate(12);
             return view('store.index')->with('mains', $mains);
     }
 
@@ -58,7 +58,7 @@ class MainStoreController extends Controller
             'item' => 'required',
             'supplier_name' => 'required',
             'supplier_address' => 'required',
-            'maind' => 'required',
+            'received' => 'required',
             'department' => 'required',
             'quantity' => 'required',
             'price_each' => 'required',
@@ -72,7 +72,7 @@ class MainStoreController extends Controller
          $main->item = $request->input('item');
          $main->supplier_name = $request->input('supplier_name');
          $main->supplier_address = $request->input('supplier_address');
-         $main->maind = $request->input('maind');
+         $main->received = $request->input('received');
          $main->department = $request->input('department');
          $main->quantity = $request->input('quantity');
          $main->price_each = $request->input('price_each');

@@ -36,7 +36,7 @@ class ReceivesController extends Controller
         //     ->join('users', 'receives.user_id', '=', 'users.id')        
         //     ->select('receives.*', 'department.name', 'users.name AS username')
         //     ->get();
-            $receives = Receive::orderBy('created_at','desc')->paginate(10);
+            $receives = Receive::orderBy('created_at','desc')->paginate(12);
             return view('receive.index')->with('receives', $receives);
          
     }

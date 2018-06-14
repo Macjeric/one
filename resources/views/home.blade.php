@@ -41,7 +41,7 @@
                    @can('print_prequest')
                    <ul>
                    <li><a href="/posts">Check Requests</a></li>
-                   <li><a href="/orders/">Orders Created</a></li>
+                   <li><a href="/orders/">PurchasesOrders Created</a></li>
                    <li><a href="/orders/create">Create new Order</a></li>
                    <li><a href="/Supplier">Suppliers list</a></li>
                    <li><a href="/make-buy">Lease/Buy</a></li>
