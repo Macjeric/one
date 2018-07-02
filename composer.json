@@ -1,16 +1,9 @@
 {
-    "name": "Macjeric/one",
-    "description": "5.5.39",
-    "keywords": ["Procurement", "laravel"],
+    "name": "laravel/laravel",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
-    "authors": [
-        {
-            "name": "Macjeric",
-            "email": "@gmail"
-        }
-    ],
-
     "require": {
         "php": ">=7.0.0",
         "fideloper/proxy": "~3.3",
