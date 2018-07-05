@@ -1,7 +1,7 @@
 {
-    "name": "Macjeric/one",
-    "description": "Web",
-    "keywords": ["framework", "Web"],
+    "name": "macjeric/one",
+    "description": "Inventory Management",
+    "keywords": ["Inventory", "Web"],
     "license": "MIT",
     "type": "project",
     "require": {

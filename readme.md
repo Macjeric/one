@@ -1,7 +1,7 @@
-[![Latest Stable Version](https://poser.pugx.org/Macjeric/one/v/stable)](https://packagist.org/packages/Macjeric/one)
-[![Total Downloads](https://poser.pugx.org/Macjeric/one/downloads)](https://packagist.org/packages/Macjeric/one)
-[![Latest Unstable Version](https://poser.pugx.org/Macjeric/one/v/unstable)](https://packagist.org/packages/Macjeric/one)
-[![License](https://poser.pugx.org/Macjeric/one/license)](https://packagist.org/packages/Macjeric/one)
+[![Latest Stable Version](https://poser.pugx.org/macjeric/one/v/stable)](https://packagist.org/packages/macjeric/one)
+[![Total Downloads](https://poser.pugx.org/macjeric/one/downloads)](https://packagist.org/packages/macjeric/one)
+[![Latest Unstable Version](https://poser.pugx.org/macjeric/one/v/unstable)](https://packagist.org/packages/macjeric/one)
+[![License](https://poser.pugx.org/macjeric/one/license)](https://packagist.org/packages/macjeric/one)
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
