@@ -58,3 +58,4 @@ Route::get('/others', 'PrintpageController@others');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
